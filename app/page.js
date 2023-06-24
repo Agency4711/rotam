@@ -1,47 +1,19 @@
-import { useClient } from 'next/data-client';
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
-  const client = useClient();
-  const [isMenuOpen, setIsMenuOpen] = client.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <div>
       <header className="bg-gray-800 py-4">
         <nav className="container mx-auto flex items-center justify-between">
           <h1 className="text-white text-2xl font-bold">Rota</h1>
-          <button
-            className="text-white lg:hidden"
-            onClick={toggleMenu}
-          >
-            <svg
-              className="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-          <ul className={`lg:flex lg:space-x-4 ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <ul className={`flex space-x-4 ${isMenuOpen ? 'block' : 'hidden'}`}>
             <li>
               <a href="#" className="text-white">Home</a>
             </li>
@@ -49,8 +21,15 @@ export default function Home() {
               <a href="#" className="text-white">About us</a>
             </li>
           </ul>
+          <button
+            className="text-white lg:hidden"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? 'Close' : 'Menu'}
+          </button>
         </nav>
       </header>
+
 
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
