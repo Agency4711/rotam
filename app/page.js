@@ -13,6 +13,12 @@ export default function Home() {
             <li>
               <a href="#" className="text-white">About us</a>
             </li>
+            <li>
+              <a href="#" className="text-white">My Account</a>
+            </li>
+            <li>
+              <a href="#" className="text-white">Contact us</a>
+            </li>
           </ul>
         </nav>
       </header>
