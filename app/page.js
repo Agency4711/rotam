@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-      <header className="bg-gray-800 py-4">
+      <header className="bg-pink-500 py-4">
         <nav className="container mx-auto flex items-center justify-between">
           <h1 className="text-white text-2xl font-bold">Rota</h1>
           <ul className="flex space-x-4">
