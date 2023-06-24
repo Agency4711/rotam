@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useClient } from 'next/data-client';
 import Image from 'next/image';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const client = useClient();
+  const [isMenuOpen, setIsMenuOpen] = client.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <div>
       <header className="bg-gray-800 py-4">
