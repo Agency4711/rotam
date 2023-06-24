@@ -1,17 +1,12 @@
 import Image from 'next/image';
 
 export default function Home() {
-  const toggleMenu = () => {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('hidden');
-  };
-
   return (
     <div>
       <header className="bg-gray-800 py-4">
         <nav className="container mx-auto flex items-center justify-between">
           <h1 className="text-white text-2xl font-bold">Rota</h1>
-          <ul id="menu" className="flex space-x-4 hidden lg:flex">
+          <ul className="flex space-x-4">
             <li>
               <a href="#" className="text-white">Home</a>
             </li>
@@ -19,15 +14,8 @@ export default function Home() {
               <a href="#" className="text-white">About us</a>
             </li>
           </ul>
-          <button
-            className="text-white lg:hidden"
-            onClick={toggleMenu}
-          >
-            Menu
-          </button>
         </nav>
       </header>
-
 
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
