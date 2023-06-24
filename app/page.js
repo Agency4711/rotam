@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Link from 'next/link';
+import Navbar from 'app/components/Navbar';
 
 export default function Home() {
   return (
     <div>
       <header className="bg-pink-500 py-4">
-      <Navbar />
+        <Navbar />
       </header>
 
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -28,77 +29,85 @@ export default function Home() {
 
         <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
           {/* Footer Links */}
-          <a
+          <Link
             href="#"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Docs{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+            <a>
+              <h2 className="mb-3 text-2xl font-semibold">
+                Docs{' '}
+                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                  -&gt;
+                </span>
+              </h2>
+              <p className="m-0 max-w-[30ch] text-sm opacity-50">
+                Find in-depth information about Next.js features and API.
+              </p>
+            </a>
+          </Link>
 
-          <a
+          <Link
             href="#"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Learn{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+            <a>
+              <h2 className="mb-3 text-2xl font-semibold">
+                Learn{' '}
+                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                  -&gt;
+                </span>
+              </h2>
+              <p className="m-0 max-w-[30ch] text-sm opacity-50">
+                Learn about Next.js in an interactive course with quizzes!
+              </p>
+            </a>
+          </Link>
 
-          <a
+          <Link
             href="#"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Templates{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Explore the Next.js 13 playground.
-            </p>
-          </a>
+            <a>
+              <h2 className="mb-3 text-2xl font-semibold">
+                Templates{' '}
+                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                  -&gt;
+                </span>
+              </h2>
+              <p className="m-0 max-w-[30ch] text-sm opacity-50">
+                Explore the Next.js 13 playground.
+              </p>
+            </a>
+          </Link>
 
-          <a
+          <Link
             href="#"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Deploy{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
-            </p>
-          </a>
+            <a>
+              <h2 className="mb-3 text-2xl font-semibold">
+                Deploy{' '}
+                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                  -&gt;
+                </span>
+              </h2>
+              <p className="m-0 max-w-[30ch] text-sm opacity-50">
+                Instantly deploy your Next.js site to a shareable URL with Vercel.
+              </p>
+            </a>
+          </Link>
         </div>
-        </main>
+      </main>
 
-        <footer className="bg-pink-500 py-4">
+      <footer className="bg-pink-500 py-4">
         <div className="container mx-auto text-white text-center">
           <div className="flex justify-center mb-4">
             <Image
@@ -114,28 +123,25 @@ export default function Home() {
           <div className="mt-2">
             <ul className="flex justify-center space-x-4">
               <li>
-                <a
-                  href="#"
-                  className="text-white opacity-50 hover:opacity-75"
-                >
-                  Terms of Service
-                </a>
+                <Link href="#">
+                  <a className="text-white opacity-50 hover:opacity-75">
+                    Terms of Service
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-white opacity-50 hover:opacity-75"
-                >
-                  Privacy Policy
-                </a>
+                <Link href="#">
+                  <a className="text-white opacity-50 hover:opacity-75">
+                    Privacy Policy
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-white opacity-50 hover:opacity-75"
-                >
-                  Cookie Policy
-                </a>
+                <Link href="#">
+                  <a className="text-white opacity-50 hover:opacity-75">
+                    Cookie Policy
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
