@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import Navbar from '../components/Navbar';
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <header className="bg-pink-500 py-4">
