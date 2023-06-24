@@ -104,6 +104,7 @@ export default function Home() {
             </p>
           </a>
         </div>
+        </main>
 
       <footer className="bg-gray-800 py-4">
         <div className="container mx-auto text-white text-center">
