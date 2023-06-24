@@ -5,16 +5,16 @@ export default function Home() {
     <div>
       <header className="bg-gray-800 py-4">
         <nav className="container mx-auto flex items-center justify-between">
-          <h1 className="text-white text-2xl font-bold">Logo</h1>
+          <h1 className="text-white text-2xl font-bold">Rota</h1>
           <ul className="flex space-x-4">
             <li>
-              <a href="#" className="text-white">Link 1</a>
+              <a href="#" className="text-white">Home/a>
             </li>
             <li>
-              <a href="#" className="text-white">Link 2</a>
+              <a href="#" className="text-white">About us</a>
             </li>
             <li>
-              <a href="#" className="text-white">Link 3</a>
+              <a href="#" className="text-white">Contact</a>
             </li>
           </ul>
         </nav>
