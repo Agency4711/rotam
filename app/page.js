@@ -8,13 +8,10 @@ export default function Home() {
           <h1 className="text-white text-2xl font-bold">Rota</h1>
           <ul className="flex space-x-4">
             <li>
-              <a href="#" className="text-white">Home/a>
+              <a href="#" className="text-white">Home</a>
             </li>
             <li>
               <a href="#" className="text-white">About us</a>
-            </li>
-            <li>
-              <a href="#" className="text-white">Contact</a>
             </li>
           </ul>
         </nav>
