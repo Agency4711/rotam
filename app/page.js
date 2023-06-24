@@ -110,7 +110,7 @@ export default function Home() {
         <div className="container mx-auto text-white text-center">
           <div className="flex justify-center mb-4">
             <Image
-              src="/company-logo.png"
+              src="logo.svg"
               alt="Company Logo"
               width={100}
               height={100}
