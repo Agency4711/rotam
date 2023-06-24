@@ -105,7 +105,7 @@ export default function Home() {
           </a>
         </div>
 
-        <footer className="bg-gray-800 py-4">
+      <footer className="bg-gray-800 py-4">
         <div className="container mx-auto text-white text-center">
           <div className="flex justify-center mb-4">
             <Image
