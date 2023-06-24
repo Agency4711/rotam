@@ -106,11 +106,48 @@ export default function Home() {
         </div>
 
         <footer className="bg-gray-800 py-4">
-          <div className="container mx-auto text-white text-center">
-            <p>&copy; 2023 Rota App. All rights reserved.</p>
+        <div className="container mx-auto text-white text-center">
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/company-logo.png"
+              alt="Company Logo"
+              width={100}
+              height={100}
+            />
           </div>
-        </footer>
-      </main>
+          <p className="text-sm opacity-50">
+            &copy; {new Date().getFullYear()} Rota App. All rights reserved.
+          </p>
+          <div className="mt-2">
+            <ul className="flex justify-center space-x-4">
+              <li>
+                <a
+                  href="#"
+                  className="text-white opacity-50 hover:opacity-75"
+                >
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-white opacity-50 hover:opacity-75"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-white opacity-50 hover:opacity-75"
+                >
+                  Cookie Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
