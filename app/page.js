@@ -1,11 +1,9 @@
-import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
   };
 
   return (
@@ -13,7 +11,7 @@ export default function Home() {
       <header className="bg-gray-800 py-4">
         <nav className="container mx-auto flex items-center justify-between">
           <h1 className="text-white text-2xl font-bold">Rota</h1>
-          <ul className={`flex space-x-4 ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <ul id="menu" className="flex space-x-4 hidden lg:flex">
             <li>
               <a href="#" className="text-white">Home</a>
             </li>
@@ -25,7 +23,7 @@ export default function Home() {
             className="text-white lg:hidden"
             onClick={toggleMenu}
           >
-            {isMenuOpen ? 'Close' : 'Menu'}
+            Menu
           </button>
         </nav>
       </header>
